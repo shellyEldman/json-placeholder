@@ -2,6 +2,8 @@ const http = require('http');
 const fs = require('fs');
 const url = require('url');
 
+const port = process.env.PORT || 8081;  // 8081 - local
+
 http.createServer(function (req, res) {
     const reqUrl = url.parse(req.url, true);
     let pathname = reqUrl.pathname;
@@ -10,7 +12,7 @@ http.createServer(function (req, res) {
         pathname = pathname.substring(0, pathname.length - 1);
     }
 
-    if (pathname.match(/\/posts/i)) {
+    if (pathname.match(/^\/posts$/i)) {
         fs.readFile('public/posts.json', function (err, data) {
             if (err) {
                 handleError(err, res);
@@ -36,8 +38,8 @@ http.createServer(function (req, res) {
         res.end();
     }
 
-}).listen(8081, function () {
-    console.log('Client is available at http://localhost:8081');
+}).listen(port, function () {
+    console.log('Client is available at http://localhost:' + port);
 });
 
 

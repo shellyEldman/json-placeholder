@@ -1,0 +1,19 @@
+{
+  "name": "json-placeholder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shellyEldman/json-placeholder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shellyEldman/json-placeholder/issues"
+  },
+  "homepage": "https://github.com/shellyEldman/json-placeholder#readme"
+}
