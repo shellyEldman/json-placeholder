@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/shellyEldman/json-placeholder/issues"
   },
-  "homepage": "https://github.com/shellyEldman/json-placeholder#readme"
+  "homepage": "https://github.com/shellyEldman/json-placeholder#readme",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
 }
